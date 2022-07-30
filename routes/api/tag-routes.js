@@ -8,8 +8,7 @@ router.get("/", (req, res) => {
     include: [
       {
         model: Product,
-        attributes: ["product_name", "price", "stock"],
-        // through: ProductTag
+         through: ProductTag
       },
     ],
   })
@@ -28,8 +27,7 @@ router.get("/:id", (req, res) => {
     include: [
       {
         model: Product,
-        as: 'price_tag',
-        attributes: ["product_name", "price", "stock"],
+        through: ProductTag
       },
     ],
   }).then((dbTagData) => {
