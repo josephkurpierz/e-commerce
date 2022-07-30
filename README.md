@@ -21,7 +21,7 @@
   ## Usage
   [github repository](https://github.com/josephkurpierz/e-commerce)
 
-  [video demo](https://drive.google.com/file/d/1HyOD0LyUxdgXhDXLtNmPUxCxceoAiSNh/view)
+  [video demo](https://drive.google.com/file/d/1lHQBpIpOYsyuvT2hAndsw8TAzsiLfObH/view)
 
   This project is used in the backend to find, create, update, and delete objects from a database
 
