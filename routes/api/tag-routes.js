@@ -9,6 +9,7 @@ router.get("/", (req, res) => {
       {
         model: Product,
         attributes: ["product_name", "price", "stock"],
+        // through: ProductTag
       },
     ],
   })
@@ -45,9 +46,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  Tag.create({
-    tag_name: req.body.tag_name,
-  })
+  Tag.create(req.body)
     .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       console.log(err);
@@ -56,7 +55,7 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  Tag.update({
+  Tag.update(req.body, {
     where: {
       id: req.params.id
     }

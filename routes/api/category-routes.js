@@ -40,8 +40,6 @@ router.get("/:id", (req, res) => {
       console.log(err);
       res.status(500);
     });
-  // find one category by its `id` value
-  // be sure to include its associated Products
 });
 
 router.post("/", (req, res) => {
